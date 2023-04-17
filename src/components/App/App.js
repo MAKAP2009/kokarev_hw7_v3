@@ -4,7 +4,7 @@ import React from 'react';
 import Header from '../Header/Header';
 import SubmitForm from '../SubmitForm/SubmitForm';
 import TodoList from '../TodoList/TodoList';
-// import Counter from '../Counter/Counter';
+import Counter from '../Counter/Counter';
 
 class App extends React.Component {
   state = {
@@ -39,9 +39,10 @@ class App extends React.Component {
         <h2>Homework 7</h2>
         <Header listCount={this.state.list.length} />
         <SubmitForm onAddItem={this.handleAddListItem} />
-        <TodoList list={this.state.list} onDelete={this.handleDelete.bind(this)}/>
-
-          {/* <Counter /> */}
+          <TodoList list={this.state.list} onDelete={this.handleDelete.bind(this)} />
+          <p className='border-top'>
+            <Counter />
+            </p>
           </header>
       </div>  
     );
